@@ -1,0 +1,25 @@
+[project]
+name = "anemll-flash-mlx"
+version = "0.1.0"
+description = "Flash-MoE inference for large MoE models on Apple Silicon using MLX"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "mlx",
+  "numpy",
+  "tokenizers",
+]
+
+[project.optional-dependencies]
+export = [
+  "safetensors",
+  "torch",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["flash_moe_mlx"]
